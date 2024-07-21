@@ -3,11 +3,11 @@ class GenCommit < Formula
 
   desc "Auto-generate git commit messages"
   homepage "https://github.com/raghavpillai/gen-commit"
-  url "https://github.com/raghavpillai/gen-commit/archive/refs/tags/v0.5.1.tar.gz"
-  sha256 "511580b627ec67cf5e7e30b66f0a608f82124621f22b29f3811bdcfd6867f6d6"
+  url "https://github.com/raghavpillai/gen-commit/archive/refs/tags/v0.5.3.tar.gz"
+  sha256 "bd20bda24adcf125f3c27574820f9466a49e837b36025deb68239c227efad196"
   license "MIT"
 
-  depends_on "python@3.11"
+  depends_on "python@3.12"
 
   resource "openai" do
     url "https://files.pythonhosted.org/packages/20/49/df107c1171607610e8f02036971da528e004979dbd04875b2bed9144bc9a/openai-1.36.1.tar.gz"
