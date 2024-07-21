@@ -22,7 +22,11 @@ class GenCommit < Formula
     venv = virtualenv_create(libexec, "python3.12")
     
     resource("requirements").stage do
-      system libexec/"bin/pip", "install", "-v", "-r", "requirements.txt"
+      result = system libexec/"bin/pip", "install", "-v", "-r", "requirements.txt", :err => :out
+      unless result
+        opoo "Pip install failed. Error output:"
+        puts File.read("pip_error.log")
+      end
     end
     
     venv.pip_install_and_link buildpath
