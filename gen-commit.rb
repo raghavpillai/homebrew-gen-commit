@@ -24,7 +24,19 @@ class GenCommit < Formula
     
     # Install requirements from the content of the file
     resource("requirements").stage do
-      system libexec/"bin/pip", "install", "-r", "requirements.txt"
+      system libexec/"bin/pip", "install", "-r", "requirements.txt", "-v"
+    end
+  rescue StandardError => e
+    ohai "Installation failed. Error details:"
+    ohai e.message
+    ohai "Attempting to install requirements individually..."
+    
+    resource("requirements").stage do
+      File.readlines("requirements.txt").each do |line|
+        package = line.strip
+        next if package.empty? || package.start_with?("#")
+        system libexec/"bin/pip", "install", package, "-v"
+      end
     end
   end
 
