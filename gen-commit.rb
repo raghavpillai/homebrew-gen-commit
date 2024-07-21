@@ -8,6 +8,7 @@ class GenCommit < Formula
   license "MIT"
 
   depends_on "python@3.12"
+  depends_on "rust" => :build  # Add Rust as a build dependency
 
   resource "openai" do
     url "https://files.pythonhosted.org/packages/20/49/df107c1171607610e8f02036971da528e004979dbd04875b2bed9144bc9a/openai-1.36.1.tar.gz"
@@ -30,6 +31,10 @@ class GenCommit < Formula
   end
 
   def install
+    # Add environment variables for tiktoken compilation
+    ENV["TIKTOKEN_BUILD_RUST"] = "1"
+    ENV["RUSTFLAGS"] = "-C target-cpu=native"
+    
     virtualenv_install_with_resources
   end
 
