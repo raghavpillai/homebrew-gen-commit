@@ -12,7 +12,7 @@ class GenCommit < Formula
 
   resource "requirements" do
     url "https://raw.githubusercontent.com/raghavpillai/gen-commit/v0.5.5/requirements.txt"
-    sha256 "the_actual_sha256_of_your_requirements_file"
+    sha256 "388cce92db0cb24d4883d2a2cac9a3622cbe70b8839ef2161cdb8be4ce5e0bbe"
   end
 
   def install
