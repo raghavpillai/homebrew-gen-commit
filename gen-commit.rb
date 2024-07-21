@@ -23,7 +23,7 @@ class GenCommit < Formula
     
     # Install dependencies from requirements.txt
     resource("requirements").stage do
-      venv.pip_install Pathname.pwd/"requirements.txt"
+      venv.pip_install "-r", Pathname.pwd/"requirements.txt"
     end
     
     venv.pip_install_and_link buildpath
