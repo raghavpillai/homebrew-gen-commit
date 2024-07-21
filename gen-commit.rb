@@ -10,9 +10,29 @@ class GenCommit < Formula
   depends_on "python@3.12"
   depends_on "rust" => :build
 
-  resource "requirements" do
-    url "https://raw.githubusercontent.com/raghavpillai/gen-commit/v0.5.5/requirements.txt"
-    sha256 "388cce92db0cb24d4883d2a2cac9a3622cbe70b8839ef2161cdb8be4ce5e0bbe"
+  resource "openai" do
+    url "https://files.pythonhosted.org/packages/20/49/df107c1171607610e8f02036971da528e004979dbd04875b2bed9144bc9a/openai-1.36.1.tar.gz"
+    sha256 "41be9e0302e95dba8a9374b885c5cb1cec2202816a70b98736fee25a2cadd1f2"
+  end
+
+  resource "anthropic" do
+    url "https://files.pythonhosted.org/packages/bb/e6/8b2e3a56571f9fd7bbf763dfb77f9f67b77f2e942e46a058c2821592f8bb/anthropic-0.2.8.tar.gz"
+    sha256 "d2629d7e26415bcce2ed0fdff0096a3fdd861099a73a1351ee705511d1c2ea6e"
+  end
+
+  resource "tiktoken" do
+    url "https://files.pythonhosted.org/packages/c4/4a/abaec53e93e3ef37224a4dd9e2fc6bb871e7a538c2b6b9d2a6397271daf4/tiktoken-0.7.0.tar.gz"
+    sha256 "1077266e949c24e0291f6c350433c6f0971365ece2b173a23bc3b9f9defef6b6"
+  end
+
+  resource "tomli" do
+    url "https://files.pythonhosted.org/packages/c0/3f/d7af728f075fb08564c5949a9c95e44352e23dee646869fa104a3b2060a3/tomli-2.0.1.tar.gz"
+    sha256 "de526c12914f0c550d15924c62d72abc48d6fe7364aa87328337a31007fe8a4f"
+  end
+
+  resource "aiohttp" do
+    url = "https://files.pythonhosted.org/packages/04/a4/e3679773ea7eb5b37a2c998e25b017cc5349edf6ba2739d1f32855cfb11b/aiohttp-3.9.5.tar.gz"
+    sha256 = "edea7d15772ceeb29db4aff55e482d4bcfb6ae160ce144f2682de02f6d693551"
   end
 
   def install
