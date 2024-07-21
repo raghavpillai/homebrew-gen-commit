@@ -4,7 +4,7 @@ class GenCommit < Formula
   desc "Auto-generate git commit messages"
   homepage "https://github.com/raghavpillai/gen-commit"
   url "https://github.com/raghavpillai/gen-commit/archive/refs/tags/v0.6.1.tar.gz"
-  sha256 "f0a392fb4dcbd8ee9160e4510cfbfdaf606e115b9e00ad9b30a55728d26e522c"
+  sha256 "6b4ebf2daaba92578ab6457fa2e62634f3d52e649310f820f2872bc4491cafad"
   license "MIT"
 
   depends_on "python@3.12"
