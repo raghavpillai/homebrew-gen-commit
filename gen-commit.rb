@@ -30,6 +30,11 @@ class GenCommit < Formula
     sha256 "de526c12914f0c550d15924c62d72abc48d6fe7364aa87328337a31007fe8a4f"
   end
 
+  resource "aiohttp" do
+    url = "https://files.pythonhosted.org/packages/04/a4/e3679773ea7eb5b37a2c998e25b017cc5349edf6ba2739d1f32855cfb11b/aiohttp-3.9.5.tar.gz"
+    sha256 = "edea7d15772ceeb29db4aff55e482d4bcfb6ae160ce144f2682de02f6d693551"
+  end
+
   def install
     # Add environment variables for tiktoken compilation
     ENV["TIKTOKEN_BUILD_RUST"] = "1"
