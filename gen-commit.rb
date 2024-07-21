@@ -20,24 +20,13 @@ class GenCommit < Formula
     ENV["RUSTFLAGS"] = "-C target-cpu=native"
     
     venv = virtualenv_create(libexec, "python3.12")
+    
+    # Install dependencies from requirements.txt
+    resource("requirements").stage do
+      venv.pip_install Pathname.pwd/"requirements.txt"
+    end
+    
     venv.pip_install_and_link buildpath
-    
-    # Install requirements from the content of the file
-    resource("requirements").stage do
-      system libexec/"bin/pip", "install", "-r", "requirements.txt", "-v"
-    end
-  rescue StandardError => e
-    ohai "Installation failed. Error details:"
-    ohai e.message
-    ohai "Attempting to install requirements individually..."
-    
-    resource("requirements").stage do
-      File.readlines("requirements.txt").each do |line|
-        package = line.strip
-        next if package.empty? || package.start_with?("#")
-        system libexec/"bin/pip", "install", package, "-v"
-      end
-    end
   end
 
   test do
