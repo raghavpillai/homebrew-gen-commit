@@ -40,12 +40,6 @@ class GenCommit < Formula
     ENV["RUSTFLAGS"] = "-C target-cpu=native"
     
     venv = virtualenv_create(libexec, "python3.12")
-    
-    # Install dependencies from requirements.txt
-    resource("requirements").stage do
-      venv.pip_install "-r", Pathname.pwd/"requirements.txt"
-    end
-    
     venv.pip_install_and_link buildpath
   end
 
