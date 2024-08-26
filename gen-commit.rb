@@ -35,6 +35,11 @@ class GenCommit < Formula
     sha256 = "edea7d15772ceeb29db4aff55e482d4bcfb6ae160ce144f2682de02f6d693551"
   end
 
+  resource "instructor" do
+    url = "https://files.pythonhosted.org/packages/af/e2/b9d5e6cc07d1dcf6edc0c683a7ef46253373b431d036fdb5d78b0a7c92a0/instructor-1.4.0.tar.gz"
+    sha256 = "79a0c93f2bf37ed5efb7bee03b587f6c9010778599bd05ad4430e2bf2f7d3cfc"
+  end
+
   def install
     ENV["TIKTOKEN_BUILD_RUST"] = "1"
     ENV["RUSTFLAGS"] = "-C target-cpu=native"
