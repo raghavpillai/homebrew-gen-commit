@@ -21,8 +21,8 @@ class GenCommit < Formula
   end
 
   resource "instructor" do
-    url = "https://files.pythonhosted.org/packages/af/e2/b9d5e6cc07d1dcf6edc0c683a7ef46253373b431d036fdb5d78b0a7c92a0/instructor-1.4.0.tar.gz"
-    sha256 = "79a0c93f2bf37ed5efb7bee03b587f6c9010778599bd05ad4430e2bf2f7d3cfc"
+    url "https://files.pythonhosted.org/packages/af/e2/b9d5e6cc07d1dcf6edc0c683a7ef46253373b431d036fdb5d78b0a7c92a0/instructor-1.4.0.tar.gz"
+    sha256 "79a0c93f2bf37ed5efb7bee03b587f6c9010778599bd05ad4430e2bf2f7d3cfc"
   end
 
   resource "tiktoken" do
@@ -33,11 +33,6 @@ class GenCommit < Formula
   resource "tomli" do
     url "https://files.pythonhosted.org/packages/c0/3f/d7af728f075fb08564c5949a9c95e44352e23dee646869fa104a3b2060a3/tomli-2.0.1.tar.gz"
     sha256 "de526c12914f0c550d15924c62d72abc48d6fe7364aa87328337a31007fe8a4f"
-  end
-
-  resource "aiohttp" do
-    url = "https://files.pythonhosted.org/packages/04/a4/e3679773ea7eb5b37a2c998e25b017cc5349edf6ba2739d1f32855cfb11b/aiohttp-3.9.5.tar.gz"
-    sha256 = "edea7d15772ceeb29db4aff55e482d4bcfb6ae160ce144f2682de02f6d693551"
   end
 
   def install
