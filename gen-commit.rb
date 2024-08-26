@@ -35,6 +35,11 @@ class GenCommit < Formula
     sha256 "de526c12914f0c550d15924c62d72abc48d6fe7364aa87328337a31007fe8a4f"
   end
 
+  resource "docstring_parser" do
+    url "https://files.pythonhosted.org/packages/08/12/9c22a58c0b1e29271051222d8906257616da84135af9ed167c9e28f85cb3/docstring_parser-0.16.tar.gz"
+    sha256 "538beabd0af1e2db0146b6bd3caa526c35a34d61af9fd2887f3a8a27a739aa6e"
+  end
+
   def install
     ENV["TIKTOKEN_BUILD_RUST"] = "1"
     ENV["RUSTFLAGS"] = "-C target-cpu=native"
