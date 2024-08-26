@@ -50,11 +50,5 @@ class GenCommit < Formula
     
     # Install the main package
     venv.pip_install_and_link buildpath
-    
-    # Copy requirements.txt to the libexec directory
-    (libexec/"requirements.txt").write buildpath.join("requirements.txt").read
-    
-    # Ensure all dependencies are installed
-    system libexec/"bin/pip", "install", "-r", libexec/"requirements.txt"
   end
 end
