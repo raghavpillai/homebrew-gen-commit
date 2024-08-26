@@ -3,7 +3,7 @@ class GenCommit < Formula
 
   desc "Auto-generate git commit messages"
   homepage "https://github.com/raghavpillai/gen-commit"
-  url "https://github.com/raghavpillai/gen-commit/archive/refs/tags/v0.7.0.tar.gz"
+  url "https://github.com/raghavpillai/gen-commit/archive/refs/tags/v0.8.0.tar.gz"
   sha256 "dba760891df9ee458d93276fd63b71b0f507581e672b5ce8fc6e0d060edead24"
   license "MIT"
 
