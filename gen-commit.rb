@@ -4,7 +4,7 @@ class GenCommit < Formula
   desc "Auto-generate git commit messages"
   homepage "https://github.com/raghavpillai/gen-commit"
   url "https://github.com/raghavpillai/gen-commit/archive/refs/tags/v1.0.0.tar.gz"
-  sha256 "7feb7efc19a9938a2653dc80d9e73a35db42393dcf92f86f3d525ac3489d5290"
+  sha256 "4f984b4b1d476f047181cddc1416f7287997d0a5dbf4c9888f53ba301dd4d242"
   license "MIT"
 
   depends_on "python@3.12"
@@ -26,9 +26,7 @@ class GenCommit < Formula
   end
 
   def install
-    # ENV["TIKTOKEN_BUILD_RUST"] = "1"
-    # ENV["RUSTFLAGS"] = "-C target-cpu=native"
-    
+    ENV["PIP_PREFER_BINARY"] = "1"
     virtualenv_install_with_resources
   end
 end

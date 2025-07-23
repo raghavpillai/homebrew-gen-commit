@@ -5,6 +5,7 @@ Just the homebrew setup for [Gen Commit](https://github.com/raghavpillai/gen-com
 ## Installation
 
 ```
+brew tap raghavpillai/gen-commit
 brew install gen-commit
 ```
 
