@@ -12,5 +12,5 @@ brew install gen-commit
 ## Usage
 
 ```
-gen-commit --help
+gencommit --help
 ```
